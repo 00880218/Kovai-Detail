@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B8860B;
+  --color-dark: #0A0A0A;
+  --color-dark-lighter: #1A1A1A;
+
+  --background-image-gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F9E29C 50%, #B8860B 100%);
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+}
+
+@utility glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+@utility text-gold-gradient {
+  @apply bg-gold-gradient bg-clip-text text-transparent;
+}
+
+@utility btn-primary {
+  @apply bg-gold-gradient text-black font-bold py-3 px-8 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-gold/20;
+}
+
+@utility btn-secondary {
+  @apply border border-gold text-gold font-bold py-3 px-8 rounded-full transition-all hover:bg-gold hover:text-black active:scale-95;
+}
+
+@utility card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/30 rounded-full hover:bg-gold/50;
+}

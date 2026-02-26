@@ -1,0 +1,7 @@
+{
+  "name": "Kovai Detail",
+  "description": "Premium doorstep car and bike detailing services in Coimbatore.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
